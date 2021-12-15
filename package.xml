@@ -8,7 +8,7 @@
   <author email="rguzman@robotnik.es">Roberto Guzmán</author>
   <author email="rnavarro@robotnik.es">Román Navarro</author>
   
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
     
   <maintainer email="asoriano@robotnik.es">Angel Soriano</maintainer>
   <maintainer email="avillena@robotnik.es">Álvaro Villena</maintainer>
@@ -23,5 +23,9 @@
   <run_depend>xacro</run_depend>
   <run_depend>hector_gazebo_plugins</run_depend>
   <run_depend>gazebo_plugins</run_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
   
 </package>
