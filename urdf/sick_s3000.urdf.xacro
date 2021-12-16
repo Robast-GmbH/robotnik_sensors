@@ -87,7 +87,7 @@
 			</ray>
 			<plugin name="${prefix}_controller" filename="${plugin_lib}">
 				<topicName>${ns}${prefix_topic}/scan</topicName>
-				<frame_name>/${prefix}_link</frame_name>
+				<frame_name>${prefix}_link</frame_name>
 			</plugin>
 		</sensor>
 	</gazebo>

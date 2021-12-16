@@ -86,7 +86,7 @@
 					<ros>
             <remapping>~/out:=${prefix_topic}/scan</remapping>
           </ros>
-					<frame_name>/${prefix}_link</frame_name>
+					<frame_name>${prefix}_link</frame_name>
 				</plugin>
 			</sensor>
 	</gazebo>

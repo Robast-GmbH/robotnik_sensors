@@ -86,7 +86,7 @@
 					<ros>
             <remapping>~/out:=${prefix_topic}/scan</remapping>
           </ros>
-					<frame_name>/${prefix}_link</frame_name> <!-- leading / avoids that current namespace is added as prefix in the frame name (/ns/prefix_link) -->
+					<frame_name>${prefix}_link</frame_name> <!-- leading / avoids that current namespace is added as prefix in the frame name (/ns/prefix_link) -->
 				</plugin>
 			</sensor>
 	</gazebo>

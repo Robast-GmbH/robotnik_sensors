@@ -61,7 +61,7 @@
 
 			<sensor type="${ray_type}" name="${prefix}_sensor">
 				<pose>0 0 0 0 0 0</pose>
-				<visualize>false</visualize>
+				<visualize>true</visualize>
 				<update_rate>12.5</update_rate>
 				<ray>
 					<scan>
@@ -85,9 +85,11 @@
 				</ray>
 				<plugin name="${prefix}_controller" filename="${plugin_lib}">
 					<ros>
-            <remapping>~/out:=${prefix_topic}/scan</remapping>
-          </ros>
-					<frame_name>/${prefix}_link</frame_name>					<!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
+						<remapping>~/out:=${prefix_topic}/scan</remapping>
+					</ros>
+					<frame_name>${prefix}_link</frame_name>
+					<output_type>sensor_msgs/LaserScan</output_type>
+					<!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
 				</plugin>
 			</sensor>
 		</gazebo>

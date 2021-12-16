@@ -112,7 +112,7 @@
           </ray>
           <plugin name="${prefix}_controller" filename="${plugin_lib}">
             <topicName>${prefix_topic}/points</topicName>
-            <frame_name>/${prefix}_link</frame_name>
+            <frame_name>${prefix}_link</frame_name>
             <gaussianNoise>0.008</gaussianNoise>
           </plugin>
         </sensor>

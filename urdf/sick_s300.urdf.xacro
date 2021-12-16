@@ -94,7 +94,7 @@
 				<ros>
             <remapping>~/out:=${prefix_topic}/scan</remapping>
           </ros>
-				<frame_name>/${prefix}_link</frame_name><!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
+				<frame_name>${prefix}_link</frame_name><!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
 			</plugin>
 		</sensor>
 	</gazebo>
