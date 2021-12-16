@@ -2,7 +2,7 @@
 <robot name="sensor_sick_nanoscan3"
 	xmlns:xacro="http://wiki.ros.org/xacro">
 
-	<xacro:macro name="sensor_sick_nanoscan3" params="prefix parent prefix_topic:='front_laser' *origin max_angle:=2.3998 min_angle:=-2.3998 gpu:=^|true">
+	<xacro:macro name="sensor_sick_nanoscan3" params="prefix parent prefix_topic:='front_laser' *origin max_angle:=2.3998 min_angle:=-2.3998 gpu:=^|false">
 
 		<joint name="${prefix}_base_joint" type="fixed">
 			<xacro:insert_block name="origin" />
