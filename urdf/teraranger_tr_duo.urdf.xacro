@@ -77,7 +77,7 @@
 			</ray>
 			<plugin name="${prefix}_sonar_controller" filename="libgazebo_ros_range.so">
 				<topicName>${prefix_topic}/sonar</topicName>
-				<frameName>${prefix}_laser_link</frameName>
+				<frame_name>${prefix}_laser_link</frame_name>
 				<gaussianNoise>0</gaussianNoise>
 				<updateRate>20</updateRate>
 				<radiation>ultrasound</radiation>
@@ -113,8 +113,10 @@
 				</range>
 			</ray>
 			<plugin name="${prefix}_range_controller" filename="libgazebo_ros_range.so">
-				<topicName>${prefix_topic}/scan</topicName>
-				<frameName>${prefix}_laser_link</frameName>
+				<ros>
+            <remapping>~/out:=${prefix_topic}/scan</remapping>
+          </ros>
+				<frame_name>${prefix}_laser_link</frame_name>
 				<gaussianNoise>0</gaussianNoise>
 				<updateRate>20</updateRate>
 				<radiation>infrared</radiation>

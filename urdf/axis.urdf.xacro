@@ -145,7 +145,7 @@
           <cameraName>${prefix}</cameraName>
           <imageTopicName>image_raw</imageTopicName>
           <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-          <frameName>/${prefix}_optical_frame_link</frameName>
+          <frame_name>/${prefix}_optical_frame_link</frame_name>
           <hackBaseline>0.0</hackBaseline>
           <distortionK1>0.0</distortionK1>
           <distortionK2>0.0</distortionK2>

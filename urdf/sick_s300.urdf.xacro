@@ -60,11 +60,11 @@
     <gazebo reference="${prefix}_link">
 		<xacro:if value="${gpu}">
 			<xacro:property name="ray_type" value="gpu_ray" />
-			<xacro:property name="plugin_lib" value="libgazebo_ros_gpu_laser.so" />
+			<xacro:property name="plugin_lib" value="libgazebo_ros_ray_sensor.so" />
 		</xacro:if>
 		<xacro:unless value="${gpu}">
 			<xacro:property name="ray_type" value="ray" />
-			<xacro:property name="plugin_lib" value="libgazebo_ros_laser.so" />
+			<xacro:property name="plugin_lib" value="libgazebo_ros_ray_sensor.so" />
 		</xacro:unless>
 		<sensor type="${ray_type}" name="${prefix}_sensor">
 			<pose>0 0 0 0 0 0</pose>
@@ -91,8 +91,10 @@
 				</noise>
 			</ray>
 			<plugin name="${prefix}_controller" filename="${plugin_lib}">
-				<topicName>${prefix_topic}/scan</topicName>
-				<frameName>/${prefix}_link</frameName><!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
+				<ros>
+            <remapping>~/out:=${prefix_topic}/scan</remapping>
+          </ros>
+				<frame_name>/${prefix}_link</frame_name><!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
 			</plugin>
 		</sensor>
 	</gazebo>

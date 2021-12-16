@@ -90,7 +90,7 @@
           </ray>
           <plugin name="${prefix}_controller" filename="${plugin_lib}">
               <topicName>${prefix_topic}/point_cloud</topicName>
-              <frameName>/${prefix}_link</frameName>
+              <frame_name>/${prefix}_link</frame_name>
               <ignoreTfPrefix>1</ignoreTfPrefix>
 
           </plugin>
