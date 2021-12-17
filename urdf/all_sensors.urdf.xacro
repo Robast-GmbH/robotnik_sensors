@@ -133,6 +133,9 @@
   <!-- RoboSense RS-Lidar MEMS (includes M100) -->
   <xacro:include filename="$(find robotnik_sensors)/urdf/rslidar_mems.urdf.xacro" />
 
+  <!-- RoboSense RS-Lidar-16 -->
+  <xacro:include filename="$(find robotnik_sensors)/urdf/rs_lidar_16.urdf.xacro" />
+
   <!-- Rubedos Viper -->
   <xacro:include filename="$(find robotnik_sensors)/urdf/rubedos_viper.urdf.xacro" />
 
