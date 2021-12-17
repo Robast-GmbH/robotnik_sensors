@@ -60,7 +60,7 @@
 			</xacro:unless>
 
                         <sensor name="${prefix}_sensor" type="${ray_type}">
-                                <visualize>true</visualize>
+                                <visualize>false</visualize>
                                 <update_rate>10</update_rate>
                                 <ray>
                                         <scan>
