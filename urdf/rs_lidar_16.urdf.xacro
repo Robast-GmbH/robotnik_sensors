@@ -2,7 +2,7 @@
 <robot name="sensor_rs_lidar_16"
 	xmlns:xacro="http://wiki.ros.org/xacro">
 
-	<xacro:macro name="sensor_rs_lidar_16" params="prefix parent prefix_topic:='front_laser' *origin max_angle:=2.3562 min_angle:=-2.3562 gpu:=^|false">
+	<xacro:macro name="sensor_rs_lidar_16" params="prefix parent prefix_topic:='top_laser' *origin max_angle:=2.3562 min_angle:=-2.3562 gpu:=^|false">
 
 		<joint name="${prefix}_base_joint" type="fixed">
 			<xacro:insert_block name="origin" />
@@ -73,8 +73,8 @@
                                                 <vertical>
                                                         <samples>16</samples>
                                                         <resolution>1</resolution>
-                                                        <min_angle>-0.261799</min_angle>
-                                                        <max_angle>0.261799</max_angle>
+                                                        <min_angle>-0.261799</min_angle> <!-- -15° -->
+                                                        <max_angle>0.261799</max_angle> <!-- +15° -->
                                                 </vertical>
                                         </scan>
                                         <range>
@@ -90,7 +90,7 @@
                                 </ray>
                                 <plugin name='${prefix}_controller' filename="${plugin_lib}">
                                         <ros>
-                                                <remapping>~/out:=${prefix_topic}/robosense_scan</remapping>
+                                                <remapping>~/out:=${prefix_topic}/points</remapping>
                                         </ros>
                                         <frame_name>${prefix}_link</frame_name>	
                                         <organize_cloud>0</organize_cloud>
