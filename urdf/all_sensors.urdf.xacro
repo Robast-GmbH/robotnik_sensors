@@ -166,5 +166,13 @@
   <!-- Azure Kinect -->
   <xacro:include filename="$(find robotnik_sensors)/urdf/azure_kinect.urdf.xacro" />
 
+  <!-- Lidar mast -->
+  <xacro:include filename="$(find robotnik_sensors)/urdf/lidar_mast.urdf.xacro" />
+
+  <!-- Ublox -->
+  <xacro:include filename="$(find robotnik_sensors)/urdf/ublox.urdf.xacro" />
+
+  <!-- Vectornav -->
+  <xacro:include filename="$(find robotnik_sensors)/urdf/vectornav.urdf.xacro" />
 
 </robot>
