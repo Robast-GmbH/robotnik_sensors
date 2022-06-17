@@ -77,11 +77,11 @@
       <xacro:if value="${gpu}">
         <!-- Using GPU needs: https://github.com/RobotnikAutomation/velodyne_simulator -->
         <xacro:property name="ray_type" value="gpu_ray" />
-        <xacro:property name="plugin_lib" value="libgazebo_ros_velodyne_gpu_laser.so" />
+        <xacro:property name="plugin_lib" value="libGazeboRosVelodyneLaser.so" />
       </xacro:if>
       <xacro:unless value="${gpu}">
         <xacro:property name="ray_type" value="ray" />
-        <xacro:property name="plugin_lib" value="libgazebo_ros_velodyne_laser.so" />
+        <xacro:property name="plugin_lib" value="libGazeboRosVelodyneLaser.so" />
       </xacro:unless>
         <sensor type="${ray_type}" name="${prefix}_sensor">
           <pose>0 0 0 0 0 0.0</pose>
