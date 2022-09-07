@@ -117,11 +117,9 @@
     </joint>
     <link name="${prefix}_camera_fisheye_optical_frame"/>
 
-
+    <!-- RGBD sensor for simulation, same as Kinect -->
+    <sensor_r430_gazebo/>
   </xacro:macro>
-  <!-- RGBD sensor for simulation, same as Kinect -->
-  <sensor_r430_gazebo/>
-
 
   <xacro:macro name="sensor_r430_gazebo">
 
@@ -194,11 +192,11 @@
                  * Point cloud is published to: /custom_ns/custom_camera/custom_points 
             -->
             <ros>
-              <xacro:argument>image_raw:=custom_image</xacro:argument>
-              <xacro:argument>image_depth:=custom_image_depth</xacro:argument>
-              <xacro:argument>camera_info:=custom_info_raw</xacro:argument>
-              <xacro:argument>camera_info_depth:=custom_info_depth</xacro:argument>
-              <xacro:argument>points:=custom_points</xacro:argument>
+              <argument>image_raw:=custom_image</argument>
+              <argument>image_depth:=custom_image_depth</argument>
+              <argument>camera_info:=custom_info_raw</argument>
+              <argument>camera_info_depth:=custom_info_depth</argument>
+              <argument>points:=custom_points</argument>
             </ros>
 
             <!-- Set camera name. If empty, defaults to sensor name (i.e. "sensor_name") -->
